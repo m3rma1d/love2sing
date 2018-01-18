@@ -1,0 +1,32 @@
+<html>
+
+<head>
+    <title>
+        Error 404
+    </title>
+
+    <link href="css/error404.css" rel="stylesheet">
+</head>
+
+<body>
+    <script src="//code.jquery.com/jquery-1.11.2.min.js"></script>
+    <h2><a href="#">Stix</a></h2>
+    <h1></h1>
+
+    <script>
+        var showText = function(target, message, index, interval) {
+            if (index < message.length) {
+                $(target).append(message[index++]);
+                setTimeout(function() {
+                    showText(target, message, index, interval);
+                }, interval);
+            }
+        }
+        $(function() {
+            showText("h1", "It's dangerous to go alone! Page not found.", 0, 80);
+        });
+
+    </script>
+</body>
+
+</html>
